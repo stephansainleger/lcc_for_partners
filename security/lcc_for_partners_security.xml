@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <record model="ir.module.category" id="module_mlcc_for_partners_category">
+            <field name="name">MLCC</field>
+            <field name="description">MLCC</field>
+        </record>
+        <record model="res.groups" id="group_mlcc_for_partners_users">
+            <field name="name">Local currency manager</field>
+            <field name="category_id" ref="module_mlcc_for_partners_category"/>
+        </record>
+    </data>
+</odoo>   

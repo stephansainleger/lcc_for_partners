@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="action_lcc_list_view" model="ir.actions.act_window">
+            <field name="name">LCC</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">lcc_for_partners.lcc</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html"><p><br/></p></field>
+        </record>
+
+        <menuitem id="lcc_list_menu"
+                name="LCC"
+                action="action_lcc_list_view"
+                parent="contacts.res_partner_menu_config"                           
+                />
+    </data>
+</odoo>
