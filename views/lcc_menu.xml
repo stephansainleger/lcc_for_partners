@@ -10,9 +10,8 @@
         </record>
 
         <menuitem id="lcc_list_menu"
-                name="LCC"
-                action="action_lcc_list_view"
-                parent="contacts.res_partner_menu_config"                           
-                />
+            name="LCC"
+            action="action_lcc_list_view"
+            parent="contacts.res_partner_menu_config"/>
     </data>
 </odoo>

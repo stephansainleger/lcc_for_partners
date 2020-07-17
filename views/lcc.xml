@@ -1,17 +1,17 @@
 <odoo>
-    <data>
-      <!-- List view of a transaction -->
-      <record model="ir.ui.view" id="lcc_tree_view">
-        <field name="name">lcc.tree</field>
-        <field name="model">lcc_for_partners.lcc</field>
-        <field name="arch" type="xml">
-          <tree string="LCC Tree">
-            <field name="name"/>
-            <field name="department"/>
-            <field name="creation_year"/>
-            <field name="in_sol_movement"/>
-          </tree>
-        </field>
-      </record>
-    </data>
+  <data>
+    <!-- List view of a transaction -->
+    <record model="ir.ui.view" id="lcc_tree_view">
+      <field name="name">lcc.tree</field>
+      <field name="model">lcc_for_partners.lcc</field>
+      <field name="arch" type="xml">
+        <tree string="LCC Tree" editable='top'>
+          <field name="name"/>
+          <field name="department"/>
+          <field name="creation_year"/>
+          <field name="in_sol_movement"/>
+        </tree>
+      </field>
+    </record>
+  </data>
 </odoo>
