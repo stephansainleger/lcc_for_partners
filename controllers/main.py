@@ -3,16 +3,15 @@ import logging
 
 from odoo.addons.auth_signup.controllers.main import AuthSignupHome
 
-class AuthSignupHome(Home):
-    _inherit = 'AuthSignupHome'
-
+class AuthSignupHome(AuthSignupHome):
+    @route()
     def do_signup(self, qcontext):
         """ Shared helper that creates a res.partner out of a token """
         # The only change compared to the parent function is the addition of the key "lcc"
         values = { key: qcontext.get(key) for key in ('login', 'name', 'password', 'lcc') } 
-        logging.debug('**********************************************************************************')
-        logging.debug('SAINLEGER : values = {}'.format(values)
-        logging.debug('**********************************************************************************')
+        logging.warning('**********************************************************************************')
+        logging.warning('SAINLEGER : values = {}'.format(values)
+        logging.warning('**********************************************************************************')
         if not values:
             raise UserError(_("The form was not properly filled in."))
         if values.get('password') != qcontext.get('confirm_password'):
