@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
         <template id="auth_signup_lcc_field" inherit_id="auth_signup.fields" name="Add LCC field to Auth SignUp">
-            <xpath expr="//div[@class='form-group field-name']" position="after">
-                <!--
+            <xpath expr="//div[@class='form-group field-name']" position="after">                
                 <div class="form-group field-lcc">
-                    <label for="name">Your Local Currency</label>
-                    <input type="select" name="lcc" t-att-value="lcc" id="lcc" class="form-control form-control-sm"
-                        t-att-readonly="'readonly' if only_passwords else None"
-                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
-                </div>
-                -->
-
-                <select class="form-control" name="lcc" t-att-value="lcc" id="name">
-                    <label for="login">Your Local Currency</label>
-                    <option value="">Local Currency...</option>
-                    <t t-foreach="request.env['lcc_for_partners.lcc'].search([])" t-as="lcc">
-                        <option t-attf-value="lcc.id">
-                            <t t-esc="lcc.name"/>
-                        </option>
-                    </t>
-                </select>
+                    <label for="name">Your Local Currency</label>                               
+                    <select class="form-control" name="lcc" t-att-value="lcc" id="name">
+                        <option value="">Local Currency...</option>
+                        <t t-foreach="request.env['lcc_for_partners.lcc'].search([])" t-as="lcc">
+                            <option t-attf-value="lcc.id">
+                                <t t-esc="lcc.name"/>
+                            </option>
+                        </t>
+                    </select>
+                </div> 
             </xpath>
         </template>
 </odoo>
