@@ -12,7 +12,7 @@ class AuthSignupHome(AuthSignupHome):
             """ Shared helper that creates a res.partner out of a token """
             # The only change compared to the parent function is the addition of the key "lcc"
             values = { key: qcontext.get(key) for key in ('login', 'name', 'password', 'lcc') } 
-            _logger.info('SAINLEGER : Local currency = {}'.format(values.get('lcc'))
+            _logger.info('SAINLEGER : Local currency = {}'.format(values.get('lcc')))
             if not values:
                 raise UserError(_("The form was not properly filled in."))
             if values.get('password') != qcontext.get('confirm_password'):
