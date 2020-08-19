@@ -41,9 +41,6 @@ class lcc(models.Model):
         translate=False,
         readonly=True
     )
-
-
-
     name = fields.Char(
         string=_("Name"),
         required=True,

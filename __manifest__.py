@@ -78,6 +78,7 @@ mission is to support the collaborative development of Odoo features and ecosyst
     'depends': [
         'base',
         'auth_signup',
+        'portal',
     ],
     'external_dependencies': {
         'python': [],
@@ -90,6 +91,7 @@ mission is to support the collaborative development of Odoo features and ecosyst
         'views/partner.xml',
         'views/lcc_menu.xml',
         'views/auth_signup_lcc_field.xml',
+        'views/portal_template_lcc.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
