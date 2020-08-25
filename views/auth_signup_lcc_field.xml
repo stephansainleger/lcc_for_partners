@@ -7,7 +7,7 @@
                     <select class="form-control" name="lcc" t-att-value="lcc" id="lcc">
                         <option value="">Local Currency...</option>
                         <t t-foreach="request.env['lcc_for_partners.lcc'].search([])" t-as="lcc">
-                            <option t-attf-value="lcc.id">
+                            <option t-attf-value="#{lcc.id}">
                                 <t t-esc="lcc.name"/>
                             </option>
                         </t>

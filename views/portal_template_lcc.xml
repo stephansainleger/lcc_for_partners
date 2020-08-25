@@ -9,7 +9,7 @@
                     <select name="lcc" t-attf-class="form-control">
                         <option value="">Local currency...</option>
                         <t t-foreach="request.env['lcc_for_partners.lcc'].search([])" t-as="lcc">
-                            <option t-attf-value="lcc.id" t-att-selected="lcc.id == partner.lcc.id">
+                            <option t-attf-value="#{lcc.id}" t-att-selected="lcc.id == partner.lcc.id">
                                 <t t-esc="lcc.name"/>
                             </option>
                         </t>
