@@ -35,12 +35,12 @@ class lcc(models.Model):
         translate=False,
         readonly=True
     )
-    __last_update = fields.Datetime(
-        string=_("Last Modified on"),
-        required=False,
-        translate=False,
-        readonly=True
-    )
+    # last_update = fields.Datetime(
+    #     string=_("Last Modified on"),
+    #     required=False,
+    #     translate=False,
+    #     readonly=True
+    # )
     name = fields.Char(
         string=_("Name"),
         required=True,

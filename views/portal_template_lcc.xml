@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
         <template id="portal_template_lcc_field" inherit_id="portal.portal_my_details" name="Add LCC field to My Details form">
-            <xpath expr="//div[@class='clearfix']" position="before">
+            <xpath expr="//div[hasclass('clearfix')]" position="before">
                 <!--<div t-attf-class="form-group #{error.get('lcc') and 'o_has_error' or ''} col-xl-6">-->
                 <div t-attf-class="form-group col-xl-6">
                     <label class="col-form-label" for="lcc">Local Currency</label>

@@ -15,9 +15,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===========
+================
 lcc_for_partners
-===========
+================
 
 Lcc For Partners module for managing local complementary currencies list for the SOL Movement:
     - list of the lcc
@@ -32,8 +32,6 @@ Just install lcc_for_partners, all dependencies will be installed by default.
 
 Known issues / Roadmap
 ======================
-
-For now, the modification of the LCC from the Portal Details form doesn't work. Deactivate the view portal_template_lcc_field to make the form working for the other fields.
 
 Bug Tracker
 ===========
@@ -73,12 +71,14 @@ This module is maintained by LOKAVALUTO.
 
 LOKAVALUTO, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and ecosystem for local complementary currency organizations.
+
 """,
 
     # any module necessary for this one to work correctly
     'depends': [
         'base',
         'auth_signup',
+        'portal',
         'account',
     ],
     'external_dependencies': {
