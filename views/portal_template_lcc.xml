@@ -6,7 +6,7 @@
                 <div t-attf-class="form-group col-xl-6">
                     <label class="col-form-label" for="lcc">Local Currency</label>
                     <!--<select name="lcc" t-attf-class="form-control #{error.get('lcc') and 'is-invalid' or ''}">-->
-                    <select name="lcc" t-attf-class="form-control">
+                    <select name="lcc" t-attf-class="form-control" t-att-value="lcc" id="lcc">
                         <option value="">Local currency...</option>
                         <t t-foreach="request.env['lcc_for_partners.lcc'].search([])" t-as="lcc">
                             <option t-attf-value="#{lcc.id}" t-att-selected="lcc.id == partner.lcc.id">
